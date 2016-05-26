@@ -1,6 +1,6 @@
 #LuaJIT Examples
 
-##LuaJIT FFI Library
+##LuaJIT FFI Library Example
 The [LuaJIT FFI Library](http://luajit.org/ext_ffi.html) allows calling external C functions and using C data structures from pure Lua code.
 
 In the folder `ffi-policy`, I created a very simple policy management library, and called by pure Lua code.
