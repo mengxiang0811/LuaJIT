@@ -133,14 +133,14 @@ int luaopen_lpolicy(lua_State *L)
     lua_setfield(L, -2, "__index");
     
     /* Set the methods to the metatable that should be accessed via object:func */
-    //luaL_setfuncs(L, lpolicy_methods, 0);
-    luaL_register(L, "lpolicy", lpolicy_methods);
+    luaL_setfuncs(L, lpolicy_methods, 0);
+    //luaL_register(L, "lpolicy", lpolicy_methods);
     
     /* 
      * Register the object.func functions into the table that is at the top of the
      * stack. 
      */
-    //luaL_newlib(L, lpolicy_functions);
+    luaL_newlib(L, lpolicy_functions);
     //luaL_register(L, "lpolicy", lpolicy_functions);
     
     return 1;
