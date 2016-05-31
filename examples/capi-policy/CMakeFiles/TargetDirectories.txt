@@ -1,1 +1,0 @@
-/Users/mengxiang/Documents/XIA/DDoS-system/Grantor/LuaJIT/examples/capi-policy/CMakeFiles/lpolicy.dir
