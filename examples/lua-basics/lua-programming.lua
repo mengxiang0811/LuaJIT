@@ -1,5 +1,6 @@
 --long strings
 do
+    print("****Long Strings****")
     a = [[
     hello
     world
@@ -17,15 +18,18 @@ do
     one
     two
     three]])
+    print("****End****")
 end
 
 --numerical constants
 do
+    print("****Numerical****")
     natural_number=314.16e-2
     print(natural_number)
 
     c = 0xff
     print("constant: 0xFF = " .. c)
+    print("****End****")
 end
 
 --[[
@@ -39,6 +43,7 @@ Assignment: The assignment statement first evaluates all its expressions
 and only then are the assignments performed
 --]]
 do
+    print("****Assignments****")
     x = 3
     y = 4
     z = 5
@@ -50,17 +55,21 @@ do
     b = false
     print(a)
     tostring(a)
+    print("****End****")
 end
 
 --Arithmetic Operators
 do
+    print("****Arithmetic Operators****")
     print("3^2 = " .. 3^2)
     print("3 / 2 = " .. 3/2) --double real numbers
     print("4 % 2 = " .. 4%2)
+    print("****End****")
 end
 
 --Relational Operators
 do
+    print("****Relational Operators****")
     print(0 ~= 0)
     print(0 == 0)
 
@@ -69,16 +78,20 @@ do
     d = 10
     e = 10
     print(d == e)
+    print("****End****")
 end
 
 --The Length Operator
 do
+    print("****Length Operators****")
     a = { "x", "y"; x = 1, [30] = 23; 45 }
     print(#a) --why 3???
+    print("****End****")
 end
 
 --Loops
 do
+    print("****Loops****")
     print("In a while loop!")
     i = 1
     while i <= 10 do
@@ -95,11 +108,12 @@ do
         print(i)
         i = i + 1
     until i == 10
-    print("End of the loop test!")
+    print("****End****")
 end
 
 --if elseif else ...
 do
+    print("****IF ELSE****")
     time = 10
     if time < 9 then
         print("Early!")
@@ -108,8 +122,10 @@ do
     else
         print("Late")
     end
+    print("****End****")
 end
 --Functions
+print("****Functions****")
 local f;
 f = function ()
     local x = 1
@@ -122,9 +138,11 @@ f = function ()
 end
 
 print(f())
+print("****End****")
 
 --Table
 do
+    print("****Table Operations****")
     print(_G['_G'] == _G)
     q = {}
     u = {['@!#'] = 'qbert', [q] = 1729, [6.28] = 'tau'}
@@ -148,17 +166,17 @@ do
     for _, val in pairs(u) do
         print(val)
     end
-    print("*******End********")
     --Lists in Table
     v = {"hello", "world", "bye!"}
     for i = 1,#v do
         print(v[i])
     end
+    print("****End****")
 end
 
 --Metatable and Metamethod
 do
-    print "Metatable and Metamethod"
+    print "****Metatable and Metamethod****"
     defaultFavs = {animal = 'gru', food = 'donuts'} 
     myFavs = {food = 'pizza'} 
     --setmetatable(myFavs, {__index = defaultFavs, __newindex = function (t, k, v) print(k,v) end}) 
@@ -171,7 +189,6 @@ do
     print(defaultFavs.animal)
     myFavs.newKey = "dog"
     print(myFavs.newKey)
-    print("****End****")
 end
 
 do
@@ -195,9 +212,12 @@ do
     setmetatable(v3, getmetatable(v1))
     r = v3 + v3
     print(r.x, r.y)
+    print("****End****")
 end
+
 --class-like tables and Inheritance
 do
+    print("****Class-like Tables and Inheritance****")
     Dog = {}
 
     function Dog:new()
@@ -226,18 +246,21 @@ do
 
     Dog3 = Dog2:new()
     Dog3:makeSound()
+    print("****End****")
 end
 
 --Modules
 do
-    print("This chunk tells you how to import new module!")
+    print("****This chunk tells you how to import new module!****")
     local M = require("module")
     M.sayhello()
     --M.about() --Error call
+    print("****End****")
 end
 
 --Functions: upvalue
 do
+    print("****Other Features of Functions****")
     function Test(n)
         local function foo()
             local function inner1()
@@ -278,9 +301,11 @@ do
     for i =1,10 do
         print(a[i]())
     end
+    print("****End****")
 end
 --Data Structures
 do
+    print("****Array****")
     --Array
     a = {4, 5, 1}
     table.insert(a, -2)
@@ -289,6 +314,7 @@ do
     for key,val in ipairs(a) do
         print(a[key])
     end
+    print("****End****")
 end
 
 --Standard Library
